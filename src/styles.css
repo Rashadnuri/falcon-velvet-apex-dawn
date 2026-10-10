@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", ui-serif, Georgia, serif;
+  --color-paper: #f3efe6;
+  --color-paper-2: #e6dfd1;
+  --color-card: #fffdf8;
+  --color-ink: #1c1914;
+  --color-muted: #6f675e;
+  --color-line: #e0d6c6;
+  --color-pine: #0f5c4c;
+  --color-pine-2: #0c332b;
+  --color-pine-3: #16483d;
+  --color-foam: #e7f3ee;
+  --color-clay: #9a4630;
+  --color-clay-soft: #f8ece7;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    margin: 0;
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-pine);
+    outline-offset: 2px;
+  }
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.surface {
+  background: var(--color-card);
+  border-radius: 1rem;
+  box-shadow:
+    0 0 0 1px rgba(28, 25, 20, 0.06),
+    0 1px 2px rgba(28, 25, 20, 0.04),
+    0 10px 28px rgba(28, 25, 20, 0.04);
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background-color 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.btn-primary {
+  background: var(--color-pine);
+  color: var(--color-paper);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--color-pine-2);
+}
+.btn-soft {
+  background: var(--color-foam);
+  color: var(--color-pine-2);
+}
+.btn-soft:hover:not(:disabled) {
+  background: var(--color-paper-2);
+}
+.btn-quiet {
+  background: transparent;
+  color: var(--color-ink);
+}
+.btn-quiet:hover:not(:disabled) {
+  background: var(--color-paper-2);
+}
+.btn-danger {
+  background: var(--color-clay);
+  color: var(--color-paper);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--color-paper);
+}
+.btn-ghost:hover:not(:disabled),
+.btn-ghost[data-active="true"] {
+  background: var(--color-pine-3);
+}
+
+.field {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  color: var(--color-ink);
+  padding: 0.75rem 0.9rem;
+}
+.field::placeholder {
+  color: var(--color-muted);
+}
+
+.mark {
+  background: var(--color-clay-soft);
+  color: var(--color-ink);
+  border-radius: 0.2rem;
+  padding: 0 0.15rem;
+}

@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CompanyDocs AI",
+      "hasCanvas": false,
+      "bodyTextLen": 699,
+      "bodyTextHash": "fb4c9b2dd91e0cbf673175e7570b7654d94122e1b5710f36a57de2ffed156765",
+      "bodyTextPrefix": "XS CompanyDocs AI sənəd köməkçisi Söhbət Sənədlər Qiymətləndirmə",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CompanyDocs AI",
+      "hasCanvas": false,
+      "bodyTextLen": 580,
+      "bodyTextHash": "a56ef32b558cc59ea7b1bf289b7bc94050d903e80b1d2f4e29f2afa32226d0a9",
+      "bodyTextPrefix": "CompanyDocs XəzərSoft MMC Sənəd köməkçisi Cavablar yalnız XəzərS",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
